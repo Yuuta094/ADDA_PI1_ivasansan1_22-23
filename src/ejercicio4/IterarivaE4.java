@@ -9,8 +9,6 @@ public class IterarivaE4 {
 	
 	public static String ejercicio4Iterativo (Integer a, Integer b, Integer c) {
 		
-		//Me da pero falla algo
-		
 		Map<Trio, String> map = Map2.empty();
 		String s = map.get(Trio.of(a,b,c));
 		
