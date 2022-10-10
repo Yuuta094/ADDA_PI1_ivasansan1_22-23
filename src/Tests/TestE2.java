@@ -10,6 +10,7 @@ public class TestE2 {
 
 	public static void main(String[] args) {
 
+		
 		//Ruta del ficheros
 				String file = "datos/PI1Ej2DatosEntrada.txt";
 			
@@ -34,10 +35,7 @@ public class TestE2 {
 		}
 	
 	}
-	
-	
-	
-	
+
 	public static List<List<String>> lee_fichero(String ruta) {
 		List<String> lineas = Files2.linesFromFile(ruta);
 		List<List<String>> res = new ArrayList<List<String>>();

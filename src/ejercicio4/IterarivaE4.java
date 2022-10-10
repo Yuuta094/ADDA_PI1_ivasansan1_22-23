@@ -33,7 +33,6 @@ public class IterarivaE4 {
 					}
 				}
 			}
-		
 		return s;
 	}
 
