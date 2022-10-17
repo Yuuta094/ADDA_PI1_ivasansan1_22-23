@@ -14,7 +14,7 @@ public class TestE4 {
 		
 		List<List<Integer>> datos = lee_fichero(file); 
 		
-		for (int i= 0; i<datos.size()-1; i++) { 
+		for (int i= 0; i<datos.size(); i++) { 
 			
 			Integer a= datos.get(i).get(0);  
 			Integer b= datos.get(i).get(1);
