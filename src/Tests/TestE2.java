@@ -25,13 +25,14 @@ public class TestE2 {
 				Integer rec_noFinal =  ejercicio2.RecursivaNoFinalE2.Ejercicio2_NoFinal(Integer.parseInt(a), Integer.parseInt(b), datos.get(i).get(2));
 				Integer rec_Final =    ejercicio2.RecursivaFinalE2.Ejercicio2_Final(Integer.parseInt(a), Integer.parseInt(b), datos.get(i).get(2));
 				Integer iterativa =    ejercicio2.IterarivaE2.Ejercicio2_Iterativo(Integer.parseInt(a), Integer.parseInt(b), datos.get(i).get(2));
+				Integer funcional =    ejercicio2.FuncionalE2.Ejercicio2_Funcional(Integer.parseInt(a), Integer.parseInt(b), datos.get(i).get(2));
 			
 				List<String> entrada = datos.get(i);
 		System.out.printf("Entrada: "+ entrada+"\n" + "Recursiva No Final \t\t%d\n" + 
 													  "Recursiva Final \t\t%d\n" + 
 													  "Iterativa \t\t\t%d\n"+
-													  "Funcional \t\t\t\t\n\n", 
-													  rec_noFinal  ,rec_Final, iterativa); 
+													  "Funcional \t\t\t%d\n\n", 
+													  rec_noFinal  ,rec_Final, iterativa, funcional); 
 		}
 	
 	}

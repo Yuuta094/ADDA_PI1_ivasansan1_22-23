@@ -1,34 +1,33 @@
 package ejercicio2;
 
 public class IterarivaE2 {
-	
+
 	public static Integer Ejercicio2_Iterativo(Integer a, Integer b, String s) {
 
+	
 		Integer ac = 0; // acumulador
 
-		for (int i = 0; i < a+1; i++) {
-			for (int j = 0; j < b+1; j++) {
-				if (s.length() == 0) {
-					ac = i * i + j * j;
-					
-				} else if (i < 2 || j < 2) {
-					ac = s.length() + i + j;
+		while (s.length() != 0 && !(a < 2 || b < 2)) { // (hasta que no se cumpla el caso base...)
 
-				} else if (i % s.length() < j % s.length()) {
-					ac = i + j;
+			if (a % s.length() < b % s.length()) {
 
-					s = s.substring(i % s.length(), j % s.length());
-					i = i - 1;
-					j = j / 2;
-					
-				} else {
-					ac = i * j;
-
-					s = s.substring(j % s.length(), i % s.length());
-					i = i / 2;
-					j = j - 1;
-				}
+				ac = a + b + ac;
+				s = s.substring(a%s.length(), b%s.length());
+				a = a - 1;
+				b = b / 2;
+			} else {
+				ac = a * b + ac;
+				s = s.substring(b%s.length(), a%s.length());
+				a = a / 2;
+				b = b - 1;
 			}
+		}
+		// (Una vez llegado al caso base, la solución es la operación del caso base)
+		
+		if (s.length() == 0) {
+			ac = a * a + b * b + ac;
+		} else {
+			ac = s.length() + a + b;
 		}
 		return ac;
 	}
