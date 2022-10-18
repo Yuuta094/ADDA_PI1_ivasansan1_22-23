@@ -40,31 +40,4 @@ public class IterarivaE1 {
 		}
 		return map;
 	}
-
-//	public static Map<Integer, List<String>> ejercicio1_Iterativo(Integer varA, String varB, Integer varC, String varD, Integer varE) {
-//		
-//		Map<Integer, List<String>> map = Map2.empty();
-//		EnteroCadena ec = EnteroCadena.of(varA, varB);
-//
-//		while (ec.a() < varC) {
-//			String ec2 = ec.s() + varD;
-//
-//			if (ec2.length() < varE) {
-//				Integer key = ec2.length();
-//				if (map.containsKey(key)) {
-//					map.get(key).add(ec2);
-//				} else if (!map.containsKey(key)) {
-//					List<String> ls = List2.empty();
-//					ls.add(ec2);
-//					map.put(key, ls);
-//				}
-//			}
-//			if (ec.a()%3== 0) {
-//				ec = EnteroCadena.of(ec.a() + 2, ec.s() + ec.a().toString());
-//			} else {
-//				ec = EnteroCadena.of(ec.a() + 2, ec.s().substring(ec.a() % ec.s().length()));
-//			}
-//		}
-//		return map;
-//	}
 }
