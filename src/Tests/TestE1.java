@@ -15,8 +15,6 @@ public class TestE1 {
 
 	public static void main(String[] args) {
 		
-	//	test1();
-		
 		// Ruta del ficheros
 		String file = "datos/PI1Ej1DatosEntrada.txt";
 
@@ -53,36 +51,5 @@ public class TestE1 {
 		return res;
 	}
 }
-
-
-//	public static void test1() {
-//	
-//	// Ruta del ficheros
-//			String file = "datos/PI1Ej1DatosEntrada.txt";
-//
-//			Function<String, List<String>> parseE1 = s -> {
-//				String[] v = s.split(",");
-//				return List2.of(v[0], v[1], v[2], v[3], v[4]);
-//			};
-//
-//			List<List<String>> ls = Stream2.file(file).map(parseE1).collect(Collectors.toList());
-//
-//			ls.forEach(datos -> {
-//				Integer varA = Integer.valueOf(datos.get(0));
-//				String varB = datos.get(1);
-//				Integer varC = Integer.valueOf(datos.get(2));
-//				String varD = datos.get(3);
-//				Integer varE = Integer.valueOf(datos.get(4));
-//
-//				Map<Integer, List<String>> iterativa = ejercicio1.IterarivaE1.ejercicio1_Iterativo(varA, varB, varC, varD,varE);
-//				Map<Integer, List<String>> recFinal = ejercicio1.RecursivaFinalE1.ejercicio1_RecFinal(varA, varB, varC,varD, varE);
-//				Map<Integer, List<String>> funcional = ejercicio1.FuncionalE1.ejercicio1_Funcional(varA, varB, varC, varD,varE);
-//
-//				// List<String> entrada = datos.get(i);
-//				System.out.print("1)Sol Iterativo: " +  ejercicio1.IterarivaE1.ejercicio1_Iterativo(varA, varB, varC, varD,varE));
-//			});
-//	}
-//}
-
 
 
