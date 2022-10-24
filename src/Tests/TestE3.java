@@ -13,16 +13,15 @@ public class TestE3 {
 			String file1 = "datos/PI1Ej3DatosEntrada" + i + "A.txt";
 			String file2 = "datos/PI1Ej3DatosEntrada" + i + "B.txt";
 			
-			// Tamaño de las listas
-			Integer tam = ejercicio3.RecursivaFinalE3.Ejercicio3_recFinal(file1,file2).size();
+			// Tamaño de las listas  //el tamaño del primer fichero es 10, si la suma de tamaño dividido entre 3 no da 10 esta mal el tamaño
+			Integer tam = (ejercicio3.RecursivaFinalE3.Ejercicio3_recFinal(file1,file2).size() + 
+						   ejercicio3.IterarivaE3.Ejercicio3_iterativa(file1, file2).size() + 
+					       ejercicio3.FuncionalE3.Ejercicio3_Funcional(file1, file2).size())/3;
 			
 			// Solucion de los ejercicios
-			List<Punto2D> listaOrdenadaRec_Final = ejercicio3.RecursivaFinalE3.Ejercicio3_recFinal(file1,file2)
-					.stream().sorted().collect(Collectors.toList());
-			List<Punto2D> listaOrdenadaIterativa = ejercicio3.IterarivaE3.Ejercicio3_iterativa(file1,file2).stream()
-					.sorted().collect(Collectors.toList());
-			List<Punto2D> listaOrdenadaFuncional = ejercicio3.FuncionalE3
-					.Ejercicio3_Funcional(file1,file2).stream().sorted().collect(Collectors.toList());
+			List<Punto2D> listaOrdenadaRec_Final = ejercicio3.RecursivaFinalE3.Ejercicio3_recFinal(file1,file2);
+			List<Punto2D> listaOrdenadaIterativa = ejercicio3.IterarivaE3.Ejercicio3_iterativa(file1,file2);
+			List<Punto2D> listaOrdenadaFuncional = ejercicio3.FuncionalE3.Ejercicio3_Funcional(file1,file2);
 			
 			//Tamaño de la lista
 			System.out.println("Test " + i + ": Los siguientes " + tam+ " puntos: ");

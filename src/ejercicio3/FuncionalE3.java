@@ -24,7 +24,8 @@ public class FuncionalE3 {
 				ac.add(p);
 			}
 		});
-		return ac;
+		
+		return ac.stream().sorted().toList();
 
 	}
 }
